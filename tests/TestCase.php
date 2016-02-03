@@ -1,5 +1,7 @@
 <?php
 
+use App\Exceptions\Handler;
+
 class TestCase extends Illuminate\Foundation\Testing\TestCase
 {
     /**
@@ -22,4 +24,19 @@ class TestCase extends Illuminate\Foundation\Testing\TestCase
 
         return $app;
     }
+
+    protected function disableExceptionHandling()
+    {
+        app()->instance(Handler::class, new class extends Handler {
+            public function __construct() {}
+            public function report(Exception $e)
+            {
+                // no-op
+            }
+            public function render($request, Exception $e)
+            {
+                throw $e;
+            }
+        });
+    }    
 }
