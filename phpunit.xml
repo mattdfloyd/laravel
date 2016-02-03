@@ -12,6 +12,12 @@
         <testsuite name="Application Test Suite">
             <directory>./tests/</directory>
         </testsuite>
+        <testsuite name="features">
+            <directory>./tests/features/</directory>
+        </testsuite>
+        <testsuite name="unit">
+            <directory>./tests/unit/</directory>
+        </testsuite>
     </testsuites>
     <filter>
         <whitelist>
@@ -23,5 +29,7 @@
         <env name="CACHE_DRIVER" value="array"/>
         <env name="SESSION_DRIVER" value="array"/>
         <env name="QUEUE_DRIVER" value="sync"/>
+        <env name="DB_CONNECTION" value="sqlite"/>
+        <env name="DB_DATABASE" value=":memory:"/>
     </php>
 </phpunit>
