@@ -5,8 +5,17 @@
     "license": "MIT",
     "type": "project",
     "require": {
-        "php": ">=5.5.9",
-        "laravel/framework": "5.2.*"
+        "laravel/framework": "5.2.*",
+        "laravelcollective/html": "5.2.*",
+        "sofa/eloquence": "~5.1",
+        "bugsnag/bugsnag-laravel": "~1.6",
+        "barryvdh/laravel-debugbar": "~2.1",
+        "sebpro/artisanext": "0.2.*",
+        // "itbz/fpdf": "~1.7",
+        // "mandrill/mandrill": "~1.0",
+        // "omnipay/stripe": "~2.0",
+        // "stripe/stripe-php": "~3.5",
+        "php": ">=5.5.9"
     },
     "require-dev": {
         "fzaninotto/faker": "~1.4",
